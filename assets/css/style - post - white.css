@@ -361,7 +361,7 @@ margin-bottom: 20px;
         flex-wrap: wrap;
         justify-content: center;
         max-width: 1300px;
-        padding: 50px 30px;
+        padding: 15px 15px;
         gap: 2rem;
       }
     .main-box{
@@ -462,6 +462,9 @@ margin-bottom: 20px;
 
 
 @media (max-width: 690px) {
+    p{
+
+    }
     .fa-times{
 padding: 10px;
 font-size: 1.2rem;
