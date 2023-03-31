@@ -4,6 +4,7 @@
     --main-color:#d3ad7f;
     --black:hsl(240, 16%, 9%);
     --bg:#ffffff;
+    --bg1:#faf3e875;
     --border:.1rem solid rgba(0, 0, 0, 0.3);
 }
 
@@ -38,7 +39,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: var(--bg);
+    background: var(--bg1);
 }
 
 #cursor {
@@ -141,7 +142,7 @@ body{
 
 
 section{
-    padding:7rem 7%;
+    padding:4rem 7%;
 }
 
 .heading{
@@ -183,22 +184,21 @@ section{
 }
 
 
-
-
 .header{
     background: var(--bg);
     display: flex;
     align-items: right;
     justify-content: space-between;
     padding:1.5rem 7%;
-    border-bottom: var(--border);
+    /* border-bottom: var(--border); */
     position: fixed;
     top:0; left: 0; right: 0;
     z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0, 0, 0, 0.022);
 }
 
 .header .logo img{
-    height: 6rem;
+    height: 4rem;
 }
 
 .header .navbar a{
@@ -216,14 +216,15 @@ section{
 
 
 .header .icons div{
-    color:black;
+    padding-top: 7px;
+    color:#885f2d;
     cursor: pointer;
     font-size: 2.5rem;
     margin-left: 2rem;
 }
 
 .header .icons div:hover{
-    color:var(--main-color);
+    color:black;
 }
 
 #menu-btn{
@@ -572,10 +573,13 @@ section{
 }
 
 .blogs .box-container .box{
-    border:var(--border);  
+    background-color: var(--bg);
+    /* border:var(--border);   */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .blogs .box-container .box:hover{
-    background-color: rgba(128, 128, 128, 0.238); 
+    background-color: rgba(251, 247, 247, 0.885); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .blogs .box-container .box .image{
     height: auto;
@@ -600,11 +604,11 @@ section{
 .blogs .box-container .box .content .title{
     font-size: 2rem;
     line-height: 1.5;
-    color:black;
+    color:#885f2d;
 }
 
 .blogs .box-container .box .content .title:hover{
-    color:var(--main-color);
+    color:black;
 }
 
 .blogs .box-container .box .content span{
@@ -617,7 +621,7 @@ section{
 .blogs .box-container .box .content p{
     font-size: 1.3rem;
     line-height: 1.4;
-    color:black;
+    color:rgba(56, 24, 24, 0.56);
     padding:1rem 0;
     text-align: justify;
 }
@@ -724,8 +728,7 @@ section{
         padding:0 5% 8rem;
     }
 }
-
-@media (max-width:768px){
+@media (max-width:3000px){
     .dropdown-content .dropdownaa{
         color:white;
       }
@@ -754,9 +757,10 @@ section{
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: black;
+        background: white;
+        color: #000000;
         width: 30rem;
-        height: calc(100vh - 9.5rem);
+        /* height: calc(50vh - 9.5rem); */
     }
 
     .header .navbar.active{
@@ -790,9 +794,9 @@ section{
         text-align: left;
         color:var(--white);
         display: block;
-        margin:1.5rem;
-        padding:.5rem;
-        font-size: 2rem;
+        margin:1.05rem;
+        padding:.25rem;
+        font-size: 1.5rem;
         /* font-size: 16px;
         border: none;
         padding: 0 1rem;
@@ -812,6 +816,9 @@ section{
         width: 90%;
         right: 2rem;
     }
+}
+
+@media (max-width:768px){
 
     .home{
         background-position: left;
